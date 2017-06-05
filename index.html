@@ -1,0 +1,74 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Weathr</title>
+  <meta name="description" content="Weather Getter">
+  <meta name="author" content="Colin Rabyniuk">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+
+  <link rel="stylesheet" href="sass/style.css">
+
+  <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+
+  <header>
+    <h1>Weathr</h1>
+  </header>
+
+  <div class="container">
+    <div class="main">
+      <form id="form" method="post">
+        <label for="location">Enter your location</label>
+        <input id="formLocation" type="text" name="location" placeholder="Just your city, please" required></input>
+        <button class="btn btn-default" type="submit" value="submit">Submit</button>
+      </form>
+
+      <div class="forecast">
+        <div class="forcast__today card" >
+          <div class="header">
+            <h2 style="text-transform: capitalize;">Istanbul</h2>
+          </div>
+
+          <div class="info">
+            <div class="info__icon">
+              <p class="date">Sat Jun 3 2017</p>
+              <p class="description" style="text-transform: capitalize;">Sunny</p>
+
+              <img class="info__icon icon" src="http://openweathermap.org/img/w/03d.png">
+            </div>
+
+            <div class="info__weather">
+              <p class="wind">Wind: 5.1 km/h</p>
+              <p class="humidex">57</p>
+            </div>
+
+          </div>
+        </div>
+
+        <button class="btn btn-default btn__forecast" type="submit" value="submit">Get Five Day Forecast</button>
+      </div>
+    </div>
+
+      <div class="forecast__five-day" style="display: none;">
+        <div class="five-days">
+
+      </div>
+    </div>
+
+  </div>
+
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

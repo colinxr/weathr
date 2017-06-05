@@ -1,0 +1,105 @@
+$mobile-width: 480px;
+$tablet-width: 768px;
+  $sm-desktop: 992px;
+$desktop-width: 1200px;
+
+// Media Queries
+
+@mixin mobile {
+ @media screen and (min-width: #{$mobile-width}) and (max-width: #{$tablet-width - 1px}) {
+   @content;
+ }
+}
+
+@mixin tablet {
+ @media screen and (max-width: #{$sm-desktop}) {
+   @content;
+ }
+}
+
+@mixin desktop {
+ @media screen and (min-width: #{$desktop-width}) {
+   @content;
+ }
+}
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #eaeaea;
+}
+
+p {
+  color: #6a6c6b;
+  font-size: 18px;
+  line-height: 27px;
+  margin-bottom: 0;
+}
+
+label {
+  font-size: 18px;
+}
+
+input[type=text] {
+  font-size: 27px;
+}
+
+header {
+  background-color: #4a4a4a;
+  color: white;
+  text-align: center;
+  h1 {
+    font-weight: 600;
+    margin-top: 0;
+  }
+}
+
+.container {
+  padding-top: 81px;
+  max-width: 1024px;
+}
+
+.forecast {
+  display: none;
+  transition: all .2s;
+}
+
+.main {
+  margin: 0 auto;
+  max-width: 728px;
+}
+
+.card {
+  margin-top: 81px;
+  padding: 27px;
+}
+
+
+.info {
+  display: flex;
+}
+
+.info__icon,
+.info__weather {
+  flex: 1;
+}
+
+.five-days {
+  display: flex;
+  @include tablet {
+    display: block;
+  }
+}
+
+.card__five-day {
+  flex: 1;
+  text-align: center;
+  .desc__five-day {
+    text-transform: capitalize;
+  }
+}
