@@ -27,7 +27,7 @@ $(document).ready(function(){
       var d = new Date();
       var date = d.toDateString();
 
-      $('h2').text(location + ' ' + roundTemp + ' C');
+      $('h2').text(city + ' ' + roundTemp + ' C');
       $('.date').text(date);
       $('.description').text(desc);
       $('.icon').attr('src', iconUrl);
@@ -93,7 +93,7 @@ $(document).ready(function(){
 
 function toggle(el){
   if ($(el).css('display') == 'none' ){
-    $(el).css('display', 'block');
+    $(el).css('display', 'block').addClass('animated bounceIn');
   }
 }
 
