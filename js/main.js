@@ -94,19 +94,20 @@ $(document).ready(function(){
 function toggle(el){
   if ($(el).css('display') == 'none' ){
     $(el).css('display', 'block').addClass('animated bounceIn');
+    console.log('animation added');
   }
 }
 
 function reset(){
   if ($('.forecast').hasClass('animated')){
-    $(this).removeClass('animated bounceIn');
+    $('.forecast').css('display', 'none').removeClass('animated bounceIn');
+    console.log('animation removed');
   }
 
   if ($('.forecast__five-day').css('display') == 'block'){
     $('.btn__forecast').prop('disabled', false);; //re-enables the get forecast button
-    $('.forecast__five-day').css('display', 'none'); //hides the five day forecast div
+    $('.forecast__five-day').css('display', 'none').removeClass('animated bounceIn'); //hides the five day forecast div, removes animated class
     $('.card__five-day').remove(); //clears the five day forcast cards from the DOM
-    $(this).removeClass('animated bounceIn');
   } else {
     return false;
   }
