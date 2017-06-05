@@ -98,10 +98,15 @@ function toggle(el){
 }
 
 function reset(){
+  if ($('.forecast').hasClass('animated')){
+    $(this).removeClass('animated bounceIn');
+  }
+
   if ($('.forecast__five-day').css('display') == 'block'){
     $('.btn__forecast').prop('disabled', false);; //re-enables the get forecast button
     $('.forecast__five-day').css('display', 'none'); //hides the five day forecast div
     $('.card__five-day').remove(); //clears the five day forcast cards from the DOM
+    $(this).removeClass('animated bounceIn');
   } else {
     return false;
   }
