@@ -94,14 +94,12 @@ $(document).ready(function(){
 function toggle(el){
   if ($(el).css('display') == 'none' ){
     $(el).css('display', 'block').addClass('animated bounceIn');
-    console.log('animation added');
   }
 }
 
 function reset(){
   if ($('.forecast').hasClass('animated')){
     $('.forecast').css('display', 'none').removeClass('animated bounceIn');
-    console.log('animation removed');
   }
 
   if ($('.forecast__five-day').css('display') == 'block'){
