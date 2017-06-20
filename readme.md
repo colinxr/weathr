@@ -1,6 +1,6 @@
 # weathr
 
-### Reading the weather with ~jquery and ajax~ vanilla JS
+## Reading the weather with ~jquery and ajax~ vanilla JS
 
 Weathr is a simple app to, um, check the weather. While it was originally written with jQuery and Ajax, this new version is all vanilla JS. Cool! I'm using the OpenWeatherMap API to pull in weather data.
 
@@ -8,7 +8,7 @@ __App.js is my vanilla js file. main.js is the original jQuery file, included fo
 
 ![Weathr app screenshot - Colin Rabyniuk](https://raw.githubusercontent.com/colinxr/weathr/master/weathr.png)
 
-### What I'm trying to do
+## What I'm trying to do
 
 Weathr is a weekend project I took on to get some experience working with APIs. There's a lot of weather data out there, so this seemed like a good place to start.
 
@@ -24,7 +24,7 @@ Originally I had typed out `document.addEventListener('DomContentLoaded', functi
 
 #### I'm pretty sure I need to read more about hoisting.
 
-### Things I'm Happy with
+## Things I'm Happy with
 
 #### How I got the five day forecast*
  OpenWeatherMap's API provides a seven day forecast starting from the current day, which users had already seen on their initial search. At first I started a For Loop, where `i` started at 1 and ended at `result.list.length`, but like, that's a really lame way to work with arrays.
