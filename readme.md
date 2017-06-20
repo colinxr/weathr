@@ -13,10 +13,10 @@ __App.js is my vanilla js file. main.js is the original jQuery file, included fo
 Weathr is a weekend project I took on to get some experience working with APIs. There's a lot of weather data out there, so this seemed like a good place to start.
 
 ### Some Difficulties
-#### DOMContentLoaded typo screwed everything up*
+#### DOMContentLoaded typo screwed everything up
 Originally I had typed out `document.addEventListener('DomContentLoaded', function()`, which, like, was just never going to work. `DOM` is all caps please.
 
- #### Deleting a bunch of elements with the same class.*
+#### Deleting a bunch of elements with the same class.
  In jQuery this is just `.remove('$(el)’)`, pretty simple here. With vanilla JS, you use something like this: `el.parentNode.removeChild(el)`. This wasn’t really working for me and I wound up just using innerHTML to clean the slate. It works but definitely feels kind of clunky.
 
 #### Appending new nodes
