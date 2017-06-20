@@ -12,7 +12,7 @@ __App.js is my vanilla js file. main.js is the original jQuery file, included fo
 
 Weathr is a weekend project I took on to get some experience working with APIs. There's a lot of weather data out there, so this seemed like a good place to start.
 
-### Some Difficulties
+## Some Difficulties
 #### DOMContentLoaded typo screwed everything up
 Originally I had typed out `document.addEventListener('DomContentLoaded', function()`, which, like, was just never going to work. `DOM` is all caps please.
 
