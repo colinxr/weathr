@@ -84,7 +84,7 @@ $(document).ready(function(){
 
     toggle($('.forecast__five-day')); // changes display none to display block
 
-    $('.btn__forecast').prop('disabled', true); //disables button, keeps user from generating more than one five day forecasts.
+    $('.btn__forecast').prop('disabled', true); // disables button, keeps user from generating more than one five day forecasts.
 
     e.preventDefault();
   });
