@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function(){
           let d = new Date();
           let date = d.toDateString();
 
-          document.querySelector('.title').textContent = city + ' ' + roundTemp + ' C';
+          document.querySelector('.title').textContent = input.value + ' ' + roundTemp + ' C';
           document.querySelector('.date').textContent = date;
           document.querySelector('.description').textContent = desc;
           document.querySelector('.icon').setAttribute('src', iconUrl);
