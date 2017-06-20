@@ -8,7 +8,7 @@ __App.js is my vanilla js file. main.js is the original jQuery file, included fo
 
 ![Weathr app screenshot - Colin Rabyniuk](https://raw.githubusercontent.com/colinxr/weathr/master/weathr.png)
 
-## What I'm trying to do
+## What I'm Trying to Do
 
 Weathr is a weekend project I took on to get some experience working with APIs. There's a lot of weather data out there, so this seemed like a good place to start.
 
@@ -16,15 +16,15 @@ Weathr is a weekend project I took on to get some experience working with APIs. 
 #### DOMContentLoaded typo screwed everything up
 Originally I had typed out `document.addEventListener('DomContentLoaded', function()`, which, like, was just never going to work. `DOM` is all caps please.
 
-#### Deleting a bunch of elements with the same class.
+#### Deleting a bunch of elements with the same class
  In jQuery this is just `.remove('$(el)’)`, pretty simple here. With vanilla JS, you use something like this: `el.parentNode.removeChild(el)`. This wasn’t really working for me and I wound up just using innerHTML to clean the slate. It works but definitely feels kind of clunky.
 
 #### Appending new nodes
  I'm not really sure if what I've done around line 104 is really the best way to do this. In jQuery `.append` auto closes open html tags, so I had to create an array with my strings and variables, and then join that array. This made me think the regular JS solution was going to be more complicated that what it was. But I don't know. My `cardHtml` string isn't very readable, which is annoying. 
 
-#### I'm pretty sure I need to read more about hoisting.
+#### I'm pretty sure I need to read more about hoisting
 
-## Things I'm Happy with
+## Things I'm Happy With
 
 #### How I got the five day forecast*
  OpenWeatherMap's API provides a seven day forecast starting from the current day, which users had already seen on their initial search. At first I started a For Loop, where `i` started at 1 and ended at `result.list.length`, but like, that's a really lame way to work with arrays.
