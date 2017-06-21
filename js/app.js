@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function(){
       if (xhr.readyState === 4){
         if (xhr.status === 200){
 
-          let result = JSON.parse(xhr.responseText);
+          let result = JSON.parse(xhr.responseText); // JSON.parse converts DOM String from responseText to json
 
           let temp = result.main.temp;
           let roundTemp = Math.round(temp); //Converts temp into round number for easier reading
@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', function(){
        if (xhr.readyState === 4){
          if (xhr.status === 200){
 
-           let result = JSON.parse(xhr.responseText); // what does this do
+           let result = JSON.parse(xhr.responseText); // JSON.parse converts DOM String from responseText to json
 
            let arr = result.list.slice(1, result.list.length - 1); //result.list is a full seven day forecast. With .Slice() we remove the first and the last item in the array to get our proper five-day forecast
 
